@@ -12,13 +12,6 @@ def check_the_answer():
     return str(math.log(int(time.time())))
 
 
-@pytest.fixture()
-def browser():
-    browser = webdriver.Chrome()
-    yield browser
-    browser.quit()
-
-
 class TestSuit1:
     @pytest.mark.parametrize("link", ["236895", "236896", "236897", "236898", "236899",
                                       "236903", "236904", "236905"])
